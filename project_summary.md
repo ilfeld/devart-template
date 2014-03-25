@@ -13,7 +13,7 @@ Local Magic combines technological 'magic' with aesthetic 'alchemy.' The idea of
 The next step is to try and create an interesting and playfully artistic manner to represent the information and perhaps to add some more data, which can also be visualized.
 
 ## Link to Prototype
-[Example Link](http://local-magic.appspot.com "Example Link")
+[Example Link](http://local-magic.appspot.com "Prototype Link")
 
 ## Example Code
 NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
