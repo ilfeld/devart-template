@@ -15,20 +15,6 @@ The next step is to try and create an interesting and playfully artistic manner 
 
 ## Example Code
 ```
-##Convert Address to GPS coordinate
-def addressToGPS(address):
-## e.g.   address="98 st martins lane+london+uk"
-    query="https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&sensor=false&key=AIzaSyD63W8pJdthlFCNg_r3sSLOQrMW8exrcX4"
-
-    p=urllib.urlopen(query).read()
-
-    g= (json.loads(p))
-    if g['status'] != "ZERO_RESULTS":
-        gps= [g['results'][0]['geometry']['location']['lat'],g['results'][0]['geometry']['location']['lng']]
-        return str(gps)
-    else:
-        return "Zero results were found for address"
-    
 ## Lookup viewing statistics for a Wikipedia Article       
 def tcount(title):
     stats_website = "stats.grok.se/en/201312/" 
@@ -44,6 +30,20 @@ def tcount(title):
     y=recent.index('viewed')
     number= int(recent[y+7:x])
     return number
+    
+##Convert Address to GPS coordinate
+def addressToGPS(address):
+## e.g.   address="98 st martins lane+london+uk"
+    query="https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&sensor=false&key=AIzaSyD63W8pJdthlFCNg_r3sSLOQrMW8exrcX4"
+
+    p=urllib.urlopen(query).read()
+
+    g= (json.loads(p))
+    if g['status'] != "ZERO_RESULTS":
+        gps= [g['results'][0]['geometry']['location']['lat'],g['results'][0]['geometry']['location']['lng']]
+        return str(gps)
+    else:
+        return "Zero results were found for address"    
 ```
 ## Links to External Libraries
 [Github Repository for Project](https://github.com/ilfeld/devart-template/ "Github")
