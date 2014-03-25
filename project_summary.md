@@ -6,8 +6,6 @@ Local Magic
 
 
 ## Description
-Insert a description containing about 100 to 150 words, including your motivation and the meaning behind your idea and execution. The Judges will be keen to know how your idea pushes the boundaries of code and technology. 
-
 Local Magic combines technological 'magic' with aesthetic 'alchemy.' The idea of this project is to generate a visually enticing and informative webpage based on the input of any address. The first stage of the project was to write a script in python that uses the Wikipedia API and finds Wikipedia articles that have a GPS coordinate within a given radius. The second stage was to use Google's Geocoding API to find a GPS coordiante (longitude and lattitude) that matches a given address. The third stage invovled writing a script that lookups the amount of visitor views for Wikipedia articles via stats.grok.se and finally, by synthesizing these elements on Google App Engine, we have a web app that takes an address as an input and outputs the GPS coordinates and most visited Wikipedia articles in that vicinity. 
 
 The next step is to try and create an interesting and playfully artistic manner to represent the information and perhaps to add some more data, which can also be visualized.
