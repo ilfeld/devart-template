@@ -13,7 +13,7 @@ Local Magic combines technological 'magic' with aesthetic 'alchemy.' The idea of
 The next step is to try and create an interesting and playfully artistic manner to represent the information and perhaps to add some more data, which can also be visualized.
 
 ## Link to Prototype
-[Example Link](http://local-magic.appspot.com "Prototype Link")
+[Prototype Link](http://local-magic.appspot.com "Prototype Link")
 
 ## Example Code
 NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
@@ -51,7 +51,7 @@ def tcount(title):
 ## Links to External Libraries
  NOTE: You can also use this space to link to external libraries or Github repositories you used on your project.
 
-[Github Repository](https://github.com/ilfeld/devart-template/ "Github")
+[Github Repository for Project](https://github.com/ilfeld/devart-template/ "Github")
 
 ## Images & Videos
 NOTE: For additional images you can either use a relative link to an image on this repo or an absolute link to an externally hosted image.
