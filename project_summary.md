@@ -14,7 +14,6 @@ The next step is to try and create an interesting and playfully artistic manner 
 [Prototype Link](http://local-magic.appspot.com "Prototype Link")
 
 ## Example Code
-NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
 ```
 ##Convert Address to GPS coordinate
 def addressToGPS(address):
@@ -47,13 +46,7 @@ def tcount(title):
     return number
 ```
 ## Links to External Libraries
- NOTE: You can also use this space to link to external libraries or Github repositories you used on your project.
-
 [Github Repository for Project](https://github.com/ilfeld/devart-template/ "Github")
 
 ## Images & Videos
-NOTE: For additional images you can either use a relative link to an image on this repo or an absolute link to an externally hosted image.
-
 ![Example Image](project_images/cover.jpg?raw=true "Example Image")
-
-https://www.youtube.com/watch?v=30yGOxJJ2PQ
