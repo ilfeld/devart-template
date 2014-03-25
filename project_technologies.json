@@ -1,13 +1,16 @@
 {
     "technologies": {
         "apis": [
-            "insert apis"
+            "Google Geocoding"
+            "Wikipedia"
+            "stats.grok.se"
         ],
         "platforms": [
-            "insert platforms"
+            "Google App Engine"
+            "python"
         ],
         "toolkits": [
-            "insert toolkits"
+            "github"
         ]
     },
     "themes": [
