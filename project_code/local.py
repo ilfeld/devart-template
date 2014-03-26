@@ -35,11 +35,11 @@ class Guestbook(webapp2.RequestHandler):
     def post(self):
         self.response.write('</strong><a href="/">CLICK HERE TO TRY ANOTHER ADDRESS</a><br>')
         self.response.write('<!doctype html><html><body><br>You wrote: <i>"')
-        self.response.write(cgi.escape(self.request.get('content'))+'"</i>')
+        self.response.write(cgi.escape(self.request.get('content'))+'."</i>')
         address=str(cgi.escape(self.request.get('content')))
         g=  addressToGPS(address)
         self.response.write('   The resulting longitude and lattitude are: <strong>%s   ' %g)
-        self.response.write('</strong>Here are the most popular sites nearby (with their Wikipedia popularity determining their size)<br><strong>%s</body></html>' %GetWiki(g))
+        self.response.write('</strong>Here are the most popular sites nearby (with Wikipedia popularity determining size)<br><strong>%s</body></html>' %GetWiki(g))
 
 
 application = webapp2.WSGIApplication([
@@ -96,7 +96,7 @@ def GetWiki(gps):
     query="?action=query&format=json&generator="
     limit="limit=12"
     ##gps=[ 32.070278, 34.794167] Electra Tower
-    radius="9000"
+    radius="3000"
     location="geosearch&ggscoord="+lattitude+"%7C"+longitude+"&ggsradius="+radius+"&ggs"
     images_query = 'https://en.wikipedia.org/w/api.php?action=query&prop=images&format=json&pageids='
     TOP_COUNT = 7
@@ -132,25 +132,36 @@ def GetWiki(gps):
         second=avgstat-minim
         beforelast=maxim-avgstat
         s=5
+        l=5
+        ordlist=sorted(statlist)
         for x in listpages:
             pageStat=x[2]
-            if pageStat>maxim-10:
-                s=10
+
+            if pageStat==ordlist[-1]:
+                s=9
             else:
-                if pageStat<minim+10:
-                    s=1
+                if pageStat==ordlist[0]:
+                    s=2
                 else:
-                    if pageStat>minim and pageStat<avgstat:
-                        s=5
+                    if pageStat==ordlist[1]:
+                        s=3
                     else:
-                        if pageStat>avgstat and pageStat<maxim:
-                            s=8
+                        if pageStat==ordlist[2]:
+                            s=4
                         else:
-                            if pageStat==avgstat:
-                                s=7
+                            if pageStat==ordlist[3]:
+                                s=5
+                            else:
+                                if pageStat==ordlist[4]:
+                                    s=6
+                                else:
+                                    if pageStat>ordlist[4]:
+                                        s=7
+            l=s
             url="http://en.wikipedia.org/wiki?curid="+str(x[1])
-            ordered= ordered+"<font size='"+str(s)+"'><a href="+"'"+url+"'"+'>'+str(x[0])+"</a>  </font>"
-        for x in range(0,7):
+            name=(x[0]).encode('utf-8')
+            ordered= ordered+"<font size='"+str(s)+"'><a href="+"'"+url+"'"+'>'+name+"</a>  </font>"
+        for x in range(0,5):
             ordered=ordered+ordered
         return ordered
 
