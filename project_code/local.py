@@ -20,8 +20,8 @@ MAIN_PAGE_HTML = """\
 </head>
   <body>
     <form action="/sign" method="post">
-      <div><textarea name="content" rows="3" cols="56"></textarea></div>
-      <div><input type="submit" value="Enter address above to discover popular wikipedia pages around a location"></div>
+      <div><textarea name="content" rows="3" cols="70"></textarea></div>
+      <div><input type="submit" value="Enter an address above and click HERE to discover popular wikipedia pages around a location"></div>
     </form>
     <br>>>Once you have entered a location, please wait a few seconds as the Panopticon scans your data.<br>
     >>Remember that patience is a virtue.
@@ -43,7 +43,6 @@ class Guestbook(webapp2.RequestHandler):
 
     def post(self):
         self.response.write('<!doctype html><html><head><link rel="stylesheet" href="css/grb.css"></head><body><a href="/">CLICK HERE TO TRY ANOTHER ADDRESS</a>      ')
-        self.response.write('OR <a href="/images/autop8.swf">CLICK HERE TO ENABLE YOUR WEBCAM--ANYTHING THAT YOU CAN SEE, CAN ALSO SEE YOU!</a>')
         self.response.write('<br>You wrote: <i>"')
         self.response.write(cgi.escape(self.request.get('content'))+'."</i>')
         address=str(cgi.escape(self.request.get('content')))
