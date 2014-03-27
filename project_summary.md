@@ -11,8 +11,6 @@ This virtual 'panopticon' combines technological 'magic' with aesthetic 'alchemy
 
 The first stage of the project was to write a script in python that uses the Wikipedia API and finds Wikipedia articles that have a GPS coordinate within a given radius. The second stage was to use Google's Geocoding API to find a GPS coordiante (longitude and lattitude) that matches a given address. The third stage invovled writing a script that lookups the amount of visitor views for Wikipedia articles via stats.grok.se and finally, by synthesizing these elements on Google App Engine, we have a web app that takes an address as an input and outputs the GPS coordinates and most visited Wikipedia articles in that vicinity. 
 
-An additional web page examplifies the Panopticon nature of the web: While you can use it to see and learn almost anything, it can also see you. A linkable Flash page will ask the user to enable their webcam and then display the user on a bunch of little screens which can be manipulated via the mouse--in a sort of playful manner.
-
 ## Link to Prototype
 [Prototype Link](http://local-magic.appspot.com "http://local-magic.appspot.com")
 
