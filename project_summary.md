@@ -52,5 +52,4 @@ def addressToGPS(address):
 ## Links to External Libraries
 [Github Repository for Project](https://github.com/ilfeld/devart-template/ "Github")
 
-## Images & Videos
-![Example Image](project_images/cover.png?raw=true "Example Image")
+
