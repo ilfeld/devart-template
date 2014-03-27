@@ -2,7 +2,8 @@
 Local Magic
 
 ## Author
-- Etan Ilfeld, github account: ilfeld
+- Etan Ilfeld, 
+- github account: ilfeld
 
 
 ## Description
