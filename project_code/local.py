@@ -14,11 +14,20 @@ import webapp2
 MAIN_PAGE_HTML = """\
 <!doctype html>
 <html>
+<head>
+  <title>Local Magic</title>
+  <link rel="stylesheet" href="css/grb.css">
+</head>
   <body>
     <form action="/sign" method="post">
-      <div><textarea name="content" rows="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Enter address to discover popular wikipedia pages in its vicinity"></div>
+      <div><textarea name="content" rows="3" cols="56"></textarea></div>
+      <div><input type="submit" value="Enter address above to discover popular wikipedia pages around a location"></div>
     </form>
+    <br>>>Once you have entered a location, please wait a few seconds as the Panopticon scans your data.<br>
+    >>Remember that patience is a virtue.
+    <br><br>
+ 
+    
   </body>
 </html>
 """
@@ -33,13 +42,15 @@ class MainPage(webapp2.RequestHandler):
 class Guestbook(webapp2.RequestHandler):
 
     def post(self):
-        self.response.write('</strong><a href="/">CLICK HERE TO TRY ANOTHER ADDRESS</a><br>')
-        self.response.write('<!doctype html><html><body><br>You wrote: <i>"')
+        self.response.write('<!doctype html><html><head><link rel="stylesheet" href="css/grb.css"></head><body><a href="/">CLICK HERE TO TRY ANOTHER ADDRESS</a>      ')
+        self.response.write('OR <a href="/images/autop8.swf">CLICK HERE TO ENABLE YOUR WEBCAM--ANYTHING THAT YOU CAN SEE, CAN ALSO SEE YOU!</a>')
+        self.response.write('<br>You wrote: <i>"')
         self.response.write(cgi.escape(self.request.get('content'))+'."</i>')
         address=str(cgi.escape(self.request.get('content')))
         g=  addressToGPS(address)
         self.response.write('   The resulting longitude and lattitude are: <strong>%s   ' %g)
-        self.response.write('</strong>Here are the most popular sites nearby (with Wikipedia popularity determining size)<br><strong>%s</body></html>' %GetWiki(g))
+        self.response.write('</strong>Here are the most popular sites nearby (with the viewing statistics on each Wikipedia link determining the relevant font size). You can click on content to go to Wikipedia:<br><strong>%s<br>' %GetWiki(g))
+    
 
 
 application = webapp2.WSGIApplication([
@@ -161,7 +172,7 @@ def GetWiki(gps):
             url="http://en.wikipedia.org/wiki?curid="+str(x[1])
             name=(x[0]).encode('utf-8')
             ordered= ordered+"<font size='"+str(s)+"'><a href="+"'"+url+"'"+'>'+name+"</a>  </font>"
-        for x in range(0,5):
+        for x in range(0,8):
             ordered=ordered+ordered
         return ordered
 
