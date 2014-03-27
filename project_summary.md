@@ -14,6 +14,7 @@ The next step is to try and create an interesting and playfully artistic manner 
 [Prototype Link](http://local-magic.appspot.com "Prototype Link")
 
 ## Example Code
+Note that this code was writting in Python and run on Google's App Engine
 ```
 ## Lookup viewing statistics for a Wikipedia Article       
 def tcount(title):
