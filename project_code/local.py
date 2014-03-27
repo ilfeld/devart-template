@@ -43,12 +43,12 @@ class Guestbook(webapp2.RequestHandler):
 
     def post(self):
         self.response.write('<!doctype html><html><head><link rel="stylesheet" href="css/grb.css"></head><body><a href="/">CLICK HERE TO TRY ANOTHER ADDRESS</a>      ')
-        self.response.write('<br>You wrote: <i>"')
+        self.response.write('  You wrote: <i>"')
         self.response.write(cgi.escape(self.request.get('content'))+'."</i>')
         address=str(cgi.escape(self.request.get('content')))
         g=  addressToGPS(address)
         self.response.write('   The resulting longitude and lattitude are: <strong>%s   ' %g)
-        self.response.write('</strong>Here are the most popular sites nearby (with the viewing statistics on each Wikipedia link determining the relevant font size). You can click on content to go to Wikipedia:<br><strong>%s<br>' %GetWiki(g))
+        self.response.write('</strong>Here are the most popular sites nearby (with the viewing statistics on each Wikipedia link determining the relevant font size). They click to Wikipedia:<br><strong>%s<br>' %GetWiki(g))
     
 
 
