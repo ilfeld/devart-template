@@ -1,5 +1,5 @@
 # Project Title
-Discovering Geocoded Wikipedia Articles Based on their Popularity
+Serendipity: Discovering Geocoded Wikipedia Articles Based on their Popularity and a Given Address
 
 ## Author
 - Etan Ilfeld, 
