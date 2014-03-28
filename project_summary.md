@@ -1,5 +1,5 @@
 # Project Title
-The Panopticon: Discovering Geocoded Wikipedia Articles Based on their Popularity
+Discovering Geocoded Wikipedia Articles Based on their Popularity
 
 ## Author
 - Etan Ilfeld, 
