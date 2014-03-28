@@ -11,6 +11,8 @@ This virtual 'panopticon' combines technological 'magic' with aesthetic 'alchemy
 
 The first stage of the project was to write a script in python that uses the Wikipedia API and finds Wikipedia articles that have a GPS coordinate within a given radius. The second stage was to use Google's Geocoding API to find a GPS coordiante (longitude and lattitude) that matches a given address. The third stage invovled writing a script that lookups the amount of visitor views for Wikipedia articles via stats.grok.se and finally, by synthesizing these elements on Google App Engine, we have a web app that takes an address as an input and outputs the GPS coordinates and most visited Wikipedia articles in that vicinity. 
 
+The final touch was to add a uniquely generated abstract image based on the longitude and lattitude of the entry. I've really enjoyed experimenting with this project and am inspired to keep making more net.art!
+
 ## Link to Prototype
 [http://local-magic.appspot.com](http://local-magic.appspot.com "http://local-magic.appspot.com")
 
